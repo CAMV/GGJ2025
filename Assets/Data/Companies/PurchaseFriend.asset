@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: PurchaseFriend
   m_EditorClassIdentifier: 
   _id: purchaseFriend
-  _displayName: PurchaseFriend
+  _displayName: PurchsFriend
+  _ticker: PFD
+  _logo: {fileID: 21300000, guid: 38969fb2fa6a7e5448d3940a25ddf519, type: 3}

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5473fea34d3ae0545b0591f7fb499d5d, type: 3}
-  m_Name: Sahara
+  m_Name: Yay
   m_EditorClassIdentifier: 
-  _id: sahara
-  _displayName: Sahara
-  _ticker: SHR
+  _id: yay
+  _displayName: Yay
+  _ticker: YAY
   _logo: {fileID: 21300000, guid: 38969fb2fa6a7e5448d3940a25ddf519, type: 3}

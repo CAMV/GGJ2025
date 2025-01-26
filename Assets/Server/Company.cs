@@ -4,16 +4,25 @@ public class Company {
     public string CompanyId;
     public int StockPrice;
     public int StockAmount;
+    public int Dividends;
     public int NullifiedTurnsLeft;
 
-    public Company(string id, int initialPrice, int initialAmount) {
-        CompanyId = id;
-        StockPrice = initialPrice;
-        StockAmount = initialAmount;
+    private CompanyData _companyData;
+
+    public Company(CompanyData data, GameConfig config) {
+        CompanyId = data.Id;
+        StockPrice = config.initialStockPrice;
+        StockAmount = config.initialStockAmount;
+        Dividends = config.initialDividends;
         NullifiedTurnsLeft = 0;
+        _companyData = data;
     }
 
-    public int GetDividends(int amountOwned) {
-        return amountOwned * (StockPrice / StockAmount);
+    public string GetDisplayName() {
+        return $"{_companyData.Ticker}/{_companyData.DisplayName}";
+    }
+
+    public Sprite GetLogo() {
+        return _companyData.Logo;
     }
 }

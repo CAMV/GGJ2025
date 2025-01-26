@@ -14,7 +14,7 @@ public class GameState {
         Companies = new Dictionary<string, Company>();
         _config = config;
         foreach (CompanyData company in config.companies) {
-            Companies.Add(company.Id, new Company(company.Id, config.initialStockPrice, config.initialStockAmount));
+            Companies.Add(company.Id, new Company(company, config));
         }
     }
 

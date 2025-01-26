@@ -16,11 +16,15 @@ MonoBehaviour:
   eventsPerTurn: 3
   initialStockPrice: 12
   initialStockAmount: 50
+  initialDividends: 100
   initialPlayerMoney: 100
   companies:
   - {fileID: 11400000, guid: 224305193db61874183056663ef77c09, type: 2}
   - {fileID: 11400000, guid: f44c732fe3fbb0745a9c20a79d1f55c1, type: 2}
   - {fileID: 11400000, guid: b199c73d6b944c64993327d9cad0b170, type: 2}
+  - {fileID: 11400000, guid: f4b9fae0d34fcbf4387a93979c0743d6, type: 2}
+  - {fileID: 11400000, guid: d1b6ce45ae784c5478577fe2779bbe48, type: 2}
+  - {fileID: 11400000, guid: 7cfb20bce0b7f554ba54cabbc1d7a158, type: 2}
   possibleEvents:
   - {fileID: 11400000, guid: a37069c5b38f8dd46b8715a9a80c455c, type: 2}
   - {fileID: 11400000, guid: a80add2ef1cb03f4ba56263ceafa8d27, type: 2}

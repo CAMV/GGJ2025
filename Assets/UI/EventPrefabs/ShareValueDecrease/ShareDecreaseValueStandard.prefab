@@ -349,7 +349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Share Value Increased!
+  m_text: Share Value decreased...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 422d8bf3470a08948a035c9b2cd83143, type: 2}
   m_sharedMaterial: {fileID: 2223669537597358689, guid: 422d8bf3470a08948a035c9b2cd83143, type: 2}
@@ -972,7 +972,7 @@ GameObject:
   - component: {fileID: 7837768912212257073}
   - component: {fileID: 1385674777663406012}
   m_Layer: 5
-  m_Name: ShareIncreaseValueStandard
+  m_Name: ShareDecreaseValueStandard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

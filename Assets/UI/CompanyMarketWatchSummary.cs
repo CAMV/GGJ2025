@@ -20,7 +20,7 @@ public class CompanyMarketWatchSummary : MonoBehaviour {
         _companyLogo.sprite = company.GetLogo();
         _companyTitle.text = company.GetDisplayName();
         _shareCountText.text = $"{company.StockAmount} +0";
-        _shareValueText.text = $"{company.StockPrice} +0";
+        _shareValueText.text = company.GetStockPriceDeltaText();
         _profitProjectionText.text = $"{company.Dividends} +0";
         _quartersProfitText.text = $"{company.Dividends} +0";
     }

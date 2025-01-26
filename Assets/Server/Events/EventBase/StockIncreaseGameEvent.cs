@@ -18,7 +18,7 @@ public class StockIncreaseGameEvent : GameEvent {
         Company company = null;
         state.Companies.TryGetValue(companyId, out company);
         if (company != null) {
-            company.StockPrice += value;
+            company.ChangeStockPrice(value);
         }
     }
 }

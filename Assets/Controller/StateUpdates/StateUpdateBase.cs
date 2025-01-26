@@ -2,7 +2,8 @@ using UnityEngine;
 
 public enum EStateUpdateIdentifier {
     GameDataChange,
-    ProcessUpdates
+    ProcessUpdates,
+    PlayerTurn
 }
 
 public abstract class StateUpdateBase {

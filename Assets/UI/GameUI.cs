@@ -5,15 +5,23 @@ public class GameUI : MonoBehaviour {
     public int MarketWatchCompanyCount = 9;
     public GameObject SingleCompanyMarketWatchPrefab;
     public GameObject MarketSummaryParent;
+    public GameObject EventNewsParent;
+    public List<EventReceiverEntry> eventReceivers;
 
     private List<CompanyMarketWatchSummary> marketWatchSummaries;
+    private Dictionary<EGameEventIdentifier, EventReceiverEntry> eventReceiverEntryDict;
 
     private void Awake() {
         InitializeMarketWatch();
+        eventReceiverEntryDict = new Dictionary<EGameEventIdentifier, EventReceiverEntry>();
+        foreach (EventReceiverEntry entry in eventReceivers) {
+            eventReceiverEntryDict[entry.eventIdentifier] = entry;
+        }
     }
 
     public void UpdateData(GameDataChangeStateUpdate update) {
         UpdateMarketWatch(update);
+        UpdateEventNews(update);
     }
 
     public void UpdateMarketWatch(GameDataChangeStateUpdate update) {
@@ -24,6 +32,17 @@ public class GameUI : MonoBehaviour {
             } else {
                 marketWatchSummaries[i].gameObject.SetActive(false);
             }
+        }
+    }
+
+    public void UpdateEventNews(GameDataChangeStateUpdate update) {
+        foreach (Transform child in EventNewsParent.transform) {
+            Destroy(child.gameObject);
+        }
+        foreach (GameEventCard card in update.EventsExecuted) {
+            var prefabList = eventReceiverEntryDict[card.GameEvent.EventId].possiblePrefabs;
+            var prefab = Instantiate(prefabList[Random.Range(0, prefabList.Count)], EventNewsParent.transform);
+            prefab.GetComponent<EventReceiverBase>().UpdateFromCard(card);
         }
     }
 

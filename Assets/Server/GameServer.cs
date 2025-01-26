@@ -2,6 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+public enum EGameServerCommand {
+    DebugNextTurn
+}
+
 public class GameServer : MonoBehaviour {
     public GameController GameController;
     [SerializeField]
@@ -16,6 +20,28 @@ public class GameServer : MonoBehaviour {
         _state.InitializeState(numPlayers);
 
         _pendingUpdates.Add(new GameDataChangeStateUpdate(_state.Companies.Values.ToList()));
+        _pendingUpdates.Add(new PlayerTurnStateUpdate());
+        SendUpdates();
+    }
+
+    public void ReceiveCommand(EGameServerCommand command) {
+        switch (command) {
+            case EGameServerCommand.DebugNextTurn:
+                DebugNextTurn();
+                break;
+        }
+    }
+
+    private void DebugNextTurn() {
+        List<GameEventCard> events = _state.GetEvents(_config.eventsPerTurn);
+        foreach (GameEventCard card in events) {
+            card.ExecuteEvent(_state);
+        }
+
+        var dataUpdate = new GameDataChangeStateUpdate(_state.Companies.Values.ToList());
+        dataUpdate.EventsExecuted = events;
+        _pendingUpdates.Add(dataUpdate);
+        _pendingUpdates.Add(new PlayerTurnStateUpdate());
         SendUpdates();
     }
 

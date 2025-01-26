@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5473fea34d3ae0545b0591f7fb499d5d, type: 3}
-  m_Name: Mascots
+  m_Script: {fileID: 11500000, guid: 6d7b26bec0bd3c146bf2f8f53fa336c8, type: 3}
+  m_Name: ShareIncrease
   m_EditorClassIdentifier: 
-  _id: mascots
-  _displayName: Mascots
-  _ticker: MCT
-  _logo: {fileID: 21300000, guid: 38969fb2fa6a7e5448d3940a25ddf519, type: 3}
+  eventIdentifier: 0
+  possiblePrefabs:
+  - {fileID: 1385674777663406012, guid: 1ff1b4ad8aec6894c9269467967f9d36, type: 3}

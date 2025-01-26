@@ -25,6 +25,16 @@ public class GameState {
         DistributeStockDeck();
     }
 
+    public List<GameEventCard> GetEvents(int amount) {
+        List<GameEventCard> res = new List<GameEventCard>();
+        int i = amount;
+        while (EventDeck.Count > 0 && i > 0) {
+            res.Add(EventDeck.Pop());
+            i--;
+        }
+        return res;
+    }
+
     private void GenerateEventCards() {
         List<GameEventCard> possibleEventCards = new List<GameEventCard>();
         EventDeck = new Stack<GameEventCard>();

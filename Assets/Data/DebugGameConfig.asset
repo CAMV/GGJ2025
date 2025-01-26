@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e679d6e33f9489a46895257be1791ffe, type: 3}
+  m_Name: DebugGameConfig
+  m_EditorClassIdentifier: 
+  handSize: 6
+  eventsPerTurn: 3
+  initialStockPrice: 12
+  initialStockAmount: 50
+  initialPlayerMoney: 100
+  companies:
+  - {fileID: 11400000, guid: 224305193db61874183056663ef77c09, type: 2}
+  - {fileID: 11400000, guid: f44c732fe3fbb0745a9c20a79d1f55c1, type: 2}
+  - {fileID: 11400000, guid: b199c73d6b944c64993327d9cad0b170, type: 2}
+  possibleEvents:
+  - {fileID: 11400000, guid: a37069c5b38f8dd46b8715a9a80c455c, type: 2}
+  - {fileID: 11400000, guid: a80add2ef1cb03f4ba56263ceafa8d27, type: 2}
+  - {fileID: 11400000, guid: 65bcdb996ce9b4446a1b363154ccb317, type: 2}

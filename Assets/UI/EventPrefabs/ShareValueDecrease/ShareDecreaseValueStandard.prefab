@@ -349,7 +349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Share Value Increased!
+  m_text: Share Value decreased...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 422d8bf3470a08948a035c9b2cd83143, type: 2}
   m_sharedMaterial: {fileID: 2223669537597358689, guid: 422d8bf3470a08948a035c9b2cd83143, type: 2}
@@ -972,7 +972,7 @@ GameObject:
   - component: {fileID: 7837768912212257073}
   - component: {fileID: 1385674777663406012}
   m_Layer: 5
-  m_Name: ShareIncreaseValueStandard
+  m_Name: ShareDecreaseValueStandard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1054,11 +1054,13 @@ MonoBehaviour:
   ValueChangeText: {fileID: 8065837682325688109}
   EventImage: {fileID: 7432690570543155366}
   possibleImages:
-  - {fileID: 21300000, guid: 78e7fffe00ed07c44acbfb98f6c1138a, type: 3}
-  - {fileID: 21300000, guid: 97e28bfd97fa2bb4c810dd48f3060d7d, type: 3}
-  - {fileID: 21300000, guid: 127afb0e0a80b5845a71aed6bc5e9380, type: 3}
-  - {fileID: 21300000, guid: 06d5ad674e82d924f99074767f548f43, type: 3}
-  - {fileID: 21300000, guid: 06d5ad674e82d924f99074767f548f43, type: 3}
+  - {fileID: 21300000, guid: 37c8de55cd6939449ba0bab7e3ebd872, type: 3}
+  - {fileID: 21300000, guid: b61ebe09c6d213c4db5001f02fb802ec, type: 3}
+  - {fileID: 21300000, guid: 22782567f2ebcf646bf99cc61569c3f5, type: 3}
+  - {fileID: 21300000, guid: 93768510c6998ea42bba3e736181382c, type: 3}
+  - {fileID: 21300000, guid: 2321a30ca2f11da428be9fad2faca563, type: 3}
+  - {fileID: 21300000, guid: 3405a3de23ce5664c8f8e61ecf1408f9, type: 3}
+  - {fileID: 21300000, guid: bf882d94ca712a74687bf7eb5343680f, type: 3}
 --- !u!1 &7416064371249710263
 GameObject:
   m_ObjectHideFlags: 0

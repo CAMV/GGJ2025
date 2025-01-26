@@ -1748,6 +1748,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3829810769523327664, guid: 306fbcae1675be848b60eae5d45f5a7e, type: 3}
+      propertyPath: eventReceivers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3829810769523327664, guid: 306fbcae1675be848b60eae5d45f5a7e, type: 3}
+      propertyPath: 'eventReceivers.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 676a3a6496150e443a02ea3f6044c33f, type: 2}
     - target: {fileID: 4035563911385028387, guid: 306fbcae1675be848b60eae5d45f5a7e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

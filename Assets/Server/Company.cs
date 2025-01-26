@@ -34,7 +34,7 @@ public class Company {
             colorSpec = "<color=green>";
         } else if (_prevStockPrice > StockPrice) {
             colorSpec = "<color=red>";
-            plusMinus = "-";
+            plusMinus = "";
         } else {
             colorSpec = "";
             closingSpec = "";
@@ -53,5 +53,8 @@ public class Company {
     public void ChangeStockPrice(int delta) {
         _prevStockPrice = StockPrice;
         StockPrice += delta;
+        if (StockPrice < 0) {
+            StockPrice = 0;
+        }
     }
 }

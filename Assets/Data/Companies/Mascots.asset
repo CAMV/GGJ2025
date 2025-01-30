@@ -15,4 +15,4 @@ MonoBehaviour:
   _id: mascots
   _displayName: Mascots
   _ticker: MCT
-  _logo: {fileID: 21300000, guid: 38969fb2fa6a7e5448d3940a25ddf519, type: 3}
+  _logo: {fileID: 21300000, guid: 31e258b264c2a6440aa3928e878d1462, type: 3}

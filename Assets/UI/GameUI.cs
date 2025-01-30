@@ -2,9 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameUI : MonoBehaviour {
+    [Header("Player Summary")]
+    public PlayerSummary PlayerSummary;
+
+    [Header ("Market Watch")]
     public int MarketWatchCompanyCount = 9;
     public GameObject SingleCompanyMarketWatchPrefab;
     public GameObject MarketSummaryParent;
+
+    [Header ("Events")]
     public GameObject EventNewsParent;
     public List<EventReceiverEntry> eventReceivers;
 
@@ -22,6 +28,7 @@ public class GameUI : MonoBehaviour {
     public void UpdateData(GameDataChangeStateUpdate update) {
         UpdateMarketWatch(update);
         UpdateEventNews(update);
+        PlayerSummary.UpdateData(update);
     }
 
     public void UpdateMarketWatch(GameDataChangeStateUpdate update) {

@@ -19,7 +19,7 @@ public class GameServer : MonoBehaviour {
         _state = new GameState(_config);
         _state.InitializeState(numPlayers);
 
-        _pendingUpdates.Add(new GameDataChangeStateUpdate(_state.Companies.Values.ToList()));
+        _pendingUpdates.Add(CreateGameDataChangeUpdate());
         _pendingUpdates.Add(new PlayerTurnStateUpdate());
         SendUpdates();
     }
@@ -38,7 +38,7 @@ public class GameServer : MonoBehaviour {
             card.ExecuteEvent(_state);
         }
 
-        var dataUpdate = new GameDataChangeStateUpdate(_state.Companies.Values.ToList());
+        var dataUpdate = CreateGameDataChangeUpdate();
         dataUpdate.EventsExecuted = events;
         _pendingUpdates.Add(dataUpdate);
         _pendingUpdates.Add(new PlayerTurnStateUpdate());
@@ -48,5 +48,9 @@ public class GameServer : MonoBehaviour {
     private void SendUpdates() {
         GameController.QueueStateUpdates(_pendingUpdates);
         _pendingUpdates.Clear();
+    }
+
+    private GameDataChangeStateUpdate CreateGameDataChangeUpdate() {
+        return new GameDataChangeStateUpdate(_state.Companies.Values.ToList(), _state.Players.Values.ToList());
     }
 }

@@ -15,4 +15,4 @@ MonoBehaviour:
   _id: yourTime
   _displayName: YourTime
   _ticker: YTM
-  _logo: {fileID: 21300000, guid: 38969fb2fa6a7e5448d3940a25ddf519, type: 3}
+  _logo: {fileID: 21300000, guid: 80747f3c2c4c88344924e1549cde5bc9, type: 3}

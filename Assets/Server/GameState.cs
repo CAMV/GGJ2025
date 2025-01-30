@@ -58,7 +58,7 @@ public class GameState {
         _numPlayers = numPlayers;
         Players = new Dictionary<int, PlayerState>();
         for (int i=0; i < numPlayers; ++i) {
-            Players.Add(i + 1, new PlayerState(_config.initialPlayerMoney));
+            Players.Add(i + 1, new PlayerState(_config.initialPlayerMoney, $"Player {i+1}"));
         }
     }
 

@@ -7,10 +7,14 @@ public class PlayerState {
     public Dictionary<string, int> Stocks;
     public List<PlayerCard> Hand;
 
-    public PlayerState(int initialMoney, string playerName) {
+    public PlayerState(int initialMoney, string playerName, IEnumerable<Company> initialCompanies) {
         Money = initialMoney;
         PlayerName = playerName;
         Stocks = new Dictionary<string, int>();
+        foreach (Company company in initialCompanies) {
+            Stocks[company.CompanyId] = 0;
+        }
+
         Hand = new List<PlayerCard>();
     }
 

@@ -17,7 +17,9 @@ public class PlayerSummaryEntry : MonoBehaviour {
         _holdingDict = new Dictionary<string, SingleCompanyHoldingSummary>();
         foreach (string companyId in state.Stocks.Keys) {
             var entryObj = Instantiate(EntryPrefab, HoldingsParent);
-            _holdingDict.Add(companyId, entryObj.GetComponent<SingleCompanyHoldingSummary>());
+            var entry = entryObj.GetComponent<SingleCompanyHoldingSummary>();
+            _holdingDict.Add(companyId, entry);
+            entry.Initialize(companyId);
         }
         UpdateData(state);
     }
